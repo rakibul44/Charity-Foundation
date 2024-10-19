@@ -1,0 +1,121 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  /* Header styles */
+  .navbar {
+    background-color: white;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #28a745;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+  
+  .top-bar {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+    color: #6c757d;
+    font-size: 1.2rem;
+  }
+  
+  .social-icons a:hover {
+    color: #28a745;
+  }
+  
+  /* Button styles */
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Carousel (Slider) styles */
+  .carousel-image {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-overlay {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* For a dark overlay on the text */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .carousel-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .carousel-overlay p {
+    font-size: 1.2rem;
+  }
+  
+  /* Adjust carousel indicators */
+  .carousel-indicators [data-bs-target] {
+    background-color: white;
+  }
+  
+  .carousel-indicators [data-bs-target].active {
+    background-color: #28a745;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-link {
+      font-size: 0.9rem;
+    }
+  
+    .carousel-overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .carousel-overlay p {
+      font-size: 1rem;
+    }
+  
+    .top-bar {
+      font-size: 0.8rem;
+    }
+  }
+  
