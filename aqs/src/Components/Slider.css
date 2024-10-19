@@ -112,6 +112,10 @@
     font-size: 14px;
   }
 
+  .slider-menu{
+    display: none;
+  }
+
   .slider-menu ul {
     flex-direction: column;
   }
