@@ -67,7 +67,7 @@ const Slider = () => {
       <div className="slider-top-bar">
         {/* Logo on the left */}
         <div className="slider-logo">
-          <img src={logo} width="50" height="auto" className="d-inline-block align-top" alt="AQS logo" />
+          <img src={logo} className="d-inline-block align-top" alt="AQS logo" />
         </div>
 
         {/* Sunrise and Sunset in the center */}

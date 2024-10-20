@@ -1,0 +1,158 @@
+.project-section {
+  padding: 40px 20px;
+  background-image: url('../images/About.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.project-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+.project-title {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #fff; /* White text for better contrast with dark background */
+}
+
+.project-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: calc(33.333% - 20px); /* 3 cards per row */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-card-title {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-description {
+  color: #777;
+  font-size: 14px;
+}
+
+.projectbutton {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+.projectbutton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.projectbutton:active {
+  background-color: #39843b;
+  transform: scale(0.98);
+}
+
+.projectbutton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(72, 177, 68, 0.5);
+}
+
+/* Responsive Adjustments */
+
+/* Medium screens (max-width: 1024px) - 2 cards per row */
+@media (max-width: 1024px) {
+  .project-card {
+      width: calc(50% - 20px);
+  }
+
+  .project-title {
+      font-size: 24px;
+  }
+
+  .project-description {
+      font-size: 13px;
+  }
+}
+
+/* Small screens (max-width: 768px) - 1 card per row */
+@media (max-width: 768px) {
+  .project-card {
+      width: 100%; /* Full-width for each card */
+  }
+
+  .project-title {
+      font-size: 22px;
+  }
+
+  .project-description {
+      font-size: 12px;
+  }
+
+  .projectbutton {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .project-title {
+      font-size: 20px;
+  }
+
+  .project-card-title {
+      font-size: 18px;
+  }
+
+  .project-description {
+      font-size: 11px;
+  }
+
+  .projectbutton {
+      font-size: 13px;
+      padding: 8px 18px;
+  }
+}

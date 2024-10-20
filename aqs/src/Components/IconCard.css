@@ -1,0 +1,40 @@
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid; /* Border color can be customized */
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #000; /* Background color can be customized */
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .icon-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-title {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .icon-card:hover {
+    transform: translateY(-5px);
+  }
+  
