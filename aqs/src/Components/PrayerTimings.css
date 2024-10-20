@@ -1,0 +1,99 @@
+.prayer-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #FF6F00;
+}
+
+.title-container {
+  margin-bottom: 20px;
+}
+
+.title-underline {
+  width: 150px;
+  height: 3px;
+  background-color: #FF6F00;
+  margin: 10px auto;
+}
+
+.selectors {
+  margin: 20px 0;
+}
+
+.selectors select {
+  background-color: #FFA726;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.prayer-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.prayer-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.timing-table {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.timing-header, .timing-row {
+  display: contents;
+}
+
+.timing-header span, .timing-row span {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.timing-header span {
+  font-weight: bold;
+  color: #FF6F00;
+}
+
+.timing-row:nth-child(odd) span {
+  background-color: #f9f9f9;
+}
+
+.error {
+  color: red;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .timing-table {
+    grid-template-columns: 1fr;
+  }
+
+  .prayer-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

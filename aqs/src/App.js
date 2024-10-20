@@ -5,7 +5,7 @@ import About from './Components/About';
 import PillarsSection from './Components/PillarsSection';
 import DonorList from './Components/DonorList';
 import Project from './Components/Project';
-// import Time from './Components/Time';
+import PrayerTimings from './Components/PrayerTimings';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap css
 import 'jquery';
 import 'popper.js';
@@ -15,20 +15,19 @@ import '@fortawesome/fontawesome-free/css/all.min.css';  // Fontawesome Icon
 
 
 
+
 function App() {
   return (
     <div>
-      {/* Header components */}
-      {/* <Header /> */}
 
       {/* Slider Components */}
       <Slider />
 
       {/* About Components */}
-      <About />
+      <About /> 
 
       {/* Salat Time */}
-      {/* <Time /> */}
+      <PrayerTimings />
 
       {/* CardSetion 5 pillars of Islam  */}
       <PillarsSection />

@@ -93,13 +93,13 @@
   box-shadow: 0 0 0 3px rgba(72, 177, 68, 0.5);
 }
 
-/* Responsive styling for smaller screens (max-width: 768px) */
+/* Responsive styling for mobile screens (max-width: 768px) */
 @media (max-width: 768px) {
   .donor-table thead {
-      display: none;
+      display: none; /* Hide table headers */
   }
 
-  .donor-table, .donor-table tbody, .donor-table tr, .donor-table td {
+  .donor-table tbody, .donor-table tr, .donor-table td {
       display: block;
       width: 100%;
   }
@@ -113,6 +113,9 @@
       padding-left: 50%;
       position: relative;
       text-align: right;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
   }
 
   .donor-table td::before {
@@ -120,9 +123,13 @@
       position: absolute;
       left: 10px;
       width: 45%;
-      padding-left: 15px;
       font-weight: bold;
       text-align: left;
+  }
+
+  .donor-table td[data-label="Email"],
+  .donor-table td[data-label="Phone"] {
+      display: none; /* Hide unnecessary fields */
   }
 
   .donor-list-title {
