@@ -1,0 +1,154 @@
+/* General Footer Styling */
+footer {
+    background-color: #000;
+    padding: 40px 20px;
+    color: #fff;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 100px;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-contact li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact li i {
+    margin-right: 10px;
+    color: #ffa500;
+  }
+  
+  .footer-news h3,
+  .footer-newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffa500;
+  }
+  
+  .footer-news .news-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .footer-news .news-item img {
+    max-width: 60px;
+    margin-right: 10px;
+  }
+  
+  .footer-news .news-details p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .footer-news .news-details span {
+    font-size: 12px;
+    color: #ffa500;
+  }
+  
+  .footer-newsletter p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  .newsletter-form button {
+    background-color: #ffa500;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .newsletter-form button i {
+    margin-left: 5px;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .footer-social a {
+    margin: 0 10px;
+    color: #fff;
+  }
+  
+  .footer-social a:hover {
+    color: #ffa500;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .footer-container {
+      flex-direction: column;
+      padding: 0 50px;
+    }
+  
+    .footer-news, .footer-newsletter {
+      margin-top: 30px;
+    }
+  }
+  
+  /* Mobile Phones */
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 0 20px;
+    }
+  
+    .footer-news .news-item {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-news .news-item img {
+      margin-bottom: 10px;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .footer-bottom p {
+      font-size: 12px;
+    }
+  }
+  

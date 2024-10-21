@@ -6,11 +6,16 @@ import PillarsSection from './Components/PillarsSection';
 import DonorList from './Components/DonorList';
 import Project from './Components/Project';
 import PrayerTimings from './Components/PrayerTimings';
+import Gallery from './Components/Gallery';
+import VideoGallery from './Components/VideoGallery';
+import Footer from './Components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap css
 import 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';  // Fontawesome Icon
+
+
 
 
 
@@ -38,6 +43,16 @@ function App() {
       {/* Project Components */}
       <Project />
 
+
+
+      {/* Gallery Components */}
+      <Gallery />
+
+      {/* VideoGallery Components */}
+      <VideoGallery />
+
+      {/* Footer components */}
+      <Footer />
       
     </div>
   );

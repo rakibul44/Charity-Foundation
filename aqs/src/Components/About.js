@@ -7,6 +7,9 @@ const About = () => {
     <div className="about-container">
       <div className="about-text">
         <h2>About Us</h2>
+        <div className="title-underline">
+          <span></span>
+        </div>
         <p>
           Welcome to our company! We strive to provide the best services to our
           clients and ensure they have the best experience possible. Our team

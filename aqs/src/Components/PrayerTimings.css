@@ -1,24 +1,84 @@
+/* General styles */
 .prayer-container {
   text-align: center;
-  padding: 20px;
+  padding: 80px 20px;
   font-family: Arial, sans-serif;
 }
 
-h1, h2 {
+/* Titles */
+.title {
   color: #FF6F00;
+  font-size: 20px;
+}
+
+.title-2 {
+  color: #FFA726;
+  font-size: 40px;
 }
 
 .title-container {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.title-underline {
-  width: 150px;
-  height: 3px;
-  background-color: #FF6F00;
-  margin: 10px auto;
+.title-container h1,
+.title-container h2 {
+  margin: 0;
 }
 
+/* Title underline */
+.title-underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.title-underline::before,
+.title-underline::after {
+  content: '';
+  width: 80px;
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 1));
+  margin: 0 10px;
+}
+
+.title-underline::before {
+  background: linear-gradient(to left, rgba(255, 165, 0, 0), rgba(255, 165, 0, 1));
+}
+
+.title-underline span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9800; /* Center dot color */
+  border-radius: 50%;
+  position: relative;
+}
+
+.title-underline span::before,
+.title-underline span::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #ff9800; /* Smaller dots color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title-underline span::before {
+  left: -12px; /* Spacing between dots */
+}
+
+.title-underline span::after {
+  right: -12px;
+}
+
+/* Selectors */
 .selectors {
   margin: 20px 0;
 }
@@ -26,13 +86,15 @@ h1, h2 {
 .selectors select {
   background-color: #FFA726;
   color: white;
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 10px 15px; /* Adjust padding */
+  margin: 0 5px; /* Reduce margin for mobile */
   cursor: pointer;
   border-radius: 5px;
   border: none;
+  min-width: 120px; /* Set a minimum width for usability */
 }
 
+/* Content section */
 .content-section {
   display: flex;
   justify-content: space-between;
@@ -40,31 +102,63 @@ h1, h2 {
   margin-top: 30px;
 }
 
+/* Right side image */
 .prayer-image {
+  position: relative;
   flex: 1;
   margin-right: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 85%; /* Container size */
 }
 
 .prayer-image img {
-  max-width: 100%;
+  width: 80%; /* Image takes full width of container */
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
+/* Image overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 10%; /* Align the overlay to match the 80% width of the image */
+  width: 80%; /* Overlay width matches the image width (80%) */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  opacity: 1; /* Overlay is always visible */
+}
+
+.image-overlay .live-clock {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Timing table */
 .timing-table {
   flex: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 800px;
   text-align: left;
 }
 
-.timing-header, .timing-row {
+.timing-header,
+.timing-row {
   display: contents;
 }
 
-.timing-header span, .timing-row span {
+.timing-header span,
+.timing-row span {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
@@ -78,22 +172,63 @@ h1, h2 {
   background-color: #f9f9f9;
 }
 
+/* Error messages */
 .error {
   color: red;
   margin: 20px;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .content-section {
-    flex-direction: column;
-  }
-
-  .timing-table {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align */
   }
 
   .prayer-image {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below image */
+  }
+
+  .prayer-image img {
+    width: 100%; /* Image takes full width of container */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .image-overlay {
+    left: 0; /* Align overlay to the left */
+    width: 100%; /* Make overlay full width of the image */
+    height: 100%; /* Maintain full height of the image */
+    padding: 20px; /* Add some padding for better text spacing */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+
+  .selectors {
+    display: flex;
+    flex-direction: column; /* Stack select elements vertically */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .selectors select {
+    width: 100%; /* Make selects full width */
+    margin-bottom: 10px; /* Add space between selects */
+  }
+
+  
+
+  .timing-header span,
+  .timing-row span {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .image-overlay {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .image-overlay .live-clock {
+    font-size: 30px; /* Adjust font size for smaller screens */
   }
 }
