@@ -84,7 +84,6 @@ const Slider = () => {
                 <FontAwesomeIcon icon={faMoon} style={{ marginRight: '8px', color: '#1E90FF' }} />
                 <span>Sunset: {sunset || 'Loading...'}</span>
               </div>
-          
             </>
           )}
         </div>
@@ -96,8 +95,8 @@ const Slider = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><button>login</button></li>
-            <li><button>logout</button></li>
+            <li><button>Login</button></li>
+            <li><button>Logout</button></li>
           </ul>
         </nav>
       </div>

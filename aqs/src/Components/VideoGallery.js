@@ -4,14 +4,14 @@ import './VideoGallery.css';
 const VideoGallery = () => {
   // Array of YouTube video IDs
   const [videos] = useState([
-    'dQw4w9WgXcQ', // Example video IDs from YouTube
-    'eYq7WapuDLU',
-    'J---aiyznGQ',
-    'hY7m5jjJ9mM',
-    'tAGnKpE4NCI',
-    '9bZkp7q19f0',
-    'JGwWNGJdvx8',
-    '3JZ_D3ELwOQ',
+    'JnX7Oc8LqD8?si=7f4ZzS3qH-JhXFs0', // Example video IDs from YouTube
+    '3HnCS82X8qk?si=0nS5qO6qO8NO_l4h',
+    'QpindsONQe0?si=D7dRT6Ekw2VcqFFa',
+    'g00R9Eh-MD4?si=lnZUaeijGj5aG5y8',
+    'v6d3yaiDjIY?si=s3cVl4BY9cKGMrXy',
+    'c_27ruT6d0M?si=0j8y0FGeUAJdodp3',
+    'QCB5c4lnLig?si=ZHVTi1_ZK2k_ySb_',
+    'IWi_czFpFPE?si=4HSkHd4NCheR1u8Z',
   ]);
 
   // Display only 6 videos initially
