@@ -62,6 +62,31 @@
   color: #ddd;
 }
 
+.slider-menu li button {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #fff; /* White border */
+  color: #fff; /* White text */
+  padding: 5px 10px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  font-family: 'Arial', sans-serif; /* Font family */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  outline: none; /* Remove default outline */
+}
+
+.slider-menu li button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+  color: #fff; /* Keep the text white */
+  border-color: #f0f0f0; /* Change border color slightly on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.slider-menu li button:active {
+  transform: scale(0.98); /* Shrink the button a bit when clicked */
+  opacity: 0.8; /* Reduce opacity on click */
+}
+
 /* Carousel */
 .carousel-inner {
   flex-grow: 1; /* Takes up remaining space */

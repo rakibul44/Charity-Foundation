@@ -8,6 +8,7 @@ const PrayerTimings = () => {
   const [timings, setTimings] = useState({});
   const [error, setError] = useState('');
   const [currentTime, setCurrentTime] = useState('');
+  const [timeZone, setTimeZone] = useState('UTC'); // Track time zone
 
   // Function to fetch live prayer times based on country and location
   const fetchPrayerTimings = async (newCountry, newLocation) => {
@@ -21,6 +22,18 @@ const PrayerTimings = () => {
           setCountry(newCountry);
           setLocation(newLocation);
           setError('');
+
+          // Fetch time zone from the response
+          const timeZoneApiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${newLocation}&country=${newCountry}`;
+          const timeZoneResponse = await fetch(timeZoneApiUrl);
+          const timeZoneData = await timeZoneResponse.json();
+
+          if (timeZoneData.code === 200) {
+            const timeZoneOffset = timeZoneData.data.meta.timezone;
+            setTimeZone(timeZoneOffset); // Set the time zone
+          } else {
+            setError('Failed to load time zone.');
+          }
         } else {
           setError('Failed to load prayer times.');
         }
@@ -30,17 +43,20 @@ const PrayerTimings = () => {
     }
   };
 
-  // Update live clock with AM/PM
+  // Update live clock with AM/PM based on selected location's time zone
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      let hours = now.getHours();
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const ampm = hours >= 12 ? 'PM' : 'AM';
-      hours = hours % 12;
-      hours = hours ? hours : 12; // Convert '0' hours to '12'
-      const formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+      // Convert the time to the selected time zone
+      const formattedTime = new Intl.DateTimeFormat('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+        timeZone: timeZone,
+      }).format(now);
+
       setCurrentTime(formattedTime);
     };
 
@@ -51,7 +67,7 @@ const PrayerTimings = () => {
 
     // Clear interval on component unmount
     return () => clearInterval(intervalId);
-  }, []);
+  }, [timeZone]); // Trigger the effect whenever the time zone changes
 
   useEffect(() => {
     // Set default prayer timings when the component mounts
@@ -89,7 +105,7 @@ const PrayerTimings = () => {
         <div className="prayer-image">
           <img src={s1} alt="Men Praying" />
           <div className="image-overlay">
-            <p className="live-clock">{currentTime}</p> {/* Live clock displayed here */}
+            <p className="live-clock">{currentTime}</p> {/* Live clock displayed here with time zone support */}
           </div>
         </div>
 

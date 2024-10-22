@@ -96,6 +96,8 @@ const Slider = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><button>login</button></li>
+            <li><button>logout</button></li>
           </ul>
         </nav>
       </div>

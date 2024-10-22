@@ -22,8 +22,60 @@
 .donor-list-title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 30px;
-  color: #fff7f7;
+  margin-bottom: 0px;
+  color: #ff9800;
+}
+
+/* Title underline */
+.title-underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.title-underline::before,
+.title-underline::after {
+  content: '';
+  width: 80px;
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 1));
+  margin: 0 10px;
+}
+
+.title-underline::before {
+  background: linear-gradient(to left, rgba(255, 165, 0, 0), rgba(255, 165, 0, 1));
+}
+
+.title-underline span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9800; /* Center dot color */
+  border-radius: 50%;
+  position: relative;
+}
+
+.title-underline span::before,
+.title-underline span::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #ff9800; /* Smaller dots color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title-underline span::before {
+  left: -12px; /* Spacing between dots */
+}
+
+.title-underline span::after {
+  right: -12px;
 }
 
 .donor-table {

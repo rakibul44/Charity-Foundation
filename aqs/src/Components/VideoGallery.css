@@ -25,7 +25,7 @@
 .video-gallery-title {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #ffffff; /* Set title color to white for better contrast */
+    color: #ff9800; /* Set title color to white for better contrast */
     position: relative;
     z-index: 2; /* Keep content above the overlay */
 }

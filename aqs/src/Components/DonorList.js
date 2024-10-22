@@ -33,6 +33,9 @@ const DonorList = () => {
   return (
     <div className="donor-list-container">
       <h2 className="donor-list-title">Donor List</h2>
+      <div className="title-underline">
+       <span></span>
+      </div>
       <table className="donor-table">
         <thead>
           <tr>
@@ -57,7 +60,6 @@ const DonorList = () => {
           ))}
         </tbody>
       </table>
-
       <button className='DonorButton'>View More</button>
     </div>
   );

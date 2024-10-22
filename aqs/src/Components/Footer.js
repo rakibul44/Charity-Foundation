@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../images/logo.png';
+import mosque from '../images/mosque.jpg';
 import './Footer.css'; // Import the CSS file
 
 const Footer = () => {
@@ -7,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left Section: Logo & Description */}
         <div className="footer-left">
-          <img src="/path-to-your-logo/logo.png" alt="Logo" className="footer-logo" />
+          <img src={ logo } alt="Logo" className="footer-logo" />
           <p className="footer-description">
             This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. 
             Aenean sollicitudin, lorem quis bibendum auctor.
@@ -23,48 +25,43 @@ const Footer = () => {
         <div className="footer-news">
           <h3>Latest News</h3>
           <div className="news-item">
-            <img src="/path-to-news-image/news1.jpg" alt="News 1" />
+            <img src={ mosque } alt="News 1" />
             <div className="news-details">
               <p>ISLAMIC CENTER YOUTH PARTICIPATE</p>
               <span><i className="fas fa-calendar-alt"></i> 22 Aug, 2021</span>
             </div>
           </div>
           <div className="news-item">
-            <img src="/path-to-news-image/news2.jpg" alt="News 2" />
+            <img src={mosque} alt="News 2" />
             <div className="news-details">
               <p>ISLAMIC CENTER YOUTH PARTICIPATE</p>
               <span><i className="fas fa-calendar-alt"></i> 22 Aug, 2021</span>
             </div>
           </div>
           <div className="news-item">
-            <img src="/path-to-news-image/news3.jpg" alt="News 3" />
+            <img src={mosque} alt="News 3" />
             <div className="news-details">
               <p>ISLAMIC CENTER YOUTH PARTICIPATE</p>
               <span><i className="fas fa-calendar-alt"></i> 22 Aug, 2021</span>
             </div>
           </div>
-        </div>
-
-        {/* Right Section: Newsletter */}
-        <div className="footer-newsletter">
-          <h3>Newsletter</h3>
-          <p>Lorem ipsum dolor sit amet, tetur adipiscing elit. Aliquam vehicula mollis urna vel dignissim.</p>
-          <form className="newsletter-form">
-            <input type="text" placeholder="Your name" required />
-            <input type="email" placeholder="Your email here" required />
-            <button type="submit"><i className="fas fa-paper-plane"></i></button>
-          </form>
         </div>
       </div>
 
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; 2021. All rights reserved. Salat by Themelooper</p>
+        <p>&copy; 2024. All rights reserved. Azmain QS Fundation</p>
         <div className="footer-social">
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-google-plus-g"></i></a>
-        </div>
+        <button aria-label="Facebook" onClick={() => window.location.href = 'https://facebook.com'}>
+         <i className="fab fa-facebook-f"></i>
+        </button>
+         <button aria-label="Twitter" onClick={() => window.location.href = 'https://twitter.com'}>
+         <i className="fab fa-twitter"></i>
+        </button>
+         <button aria-label="Google Plus" onClick={() => window.location.href = 'https://google.com'}>
+          <i className="fab fa-google-plus-g"></i>
+        </button>
+      </div>
       </div>
     </footer>
   );
